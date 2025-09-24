@@ -54,7 +54,7 @@ int main(){
     char cidade2[50];
     char estado2;
 
-    printf("Estado 2: ");
+    printf("\nEstado 2: ");
     scanf(" %c", &estado2);
 
     printf("Código 2: ");
