@@ -31,12 +31,10 @@ int main() {
 
     printf("PIB A: ");
     scanf("%f", &pib1);
-    // PIB necessário escrever convertido em bilhões
+
     printf("Pontos turísticos A: ");
     scanf("%d", &ponto1);
 
-    printf("Densidade populacional A: ");
-    scanf("%f", &densidade1);
 
 
     // Entrada das informações da segunda carta:
@@ -70,12 +68,10 @@ int main() {
 
     printf("PIB B: ");
     scanf("%f", &pib2);
-    // PIB necessário escrever convertido em bilhões
+
     printf("Pontos turísticos B: ");
     scanf("%d", &ponto2);
 
-    printf("Densidade populacional B: ");
-    scanf("%f", &densidade2);
 
     // Impressão das informações da carta A
 
@@ -87,9 +83,12 @@ int main() {
     printf("Área A: %.2f km²\n", area1);
     printf("PIB A: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos A: %d\n", ponto1);
+
+    densidade1 = (float) populacao1 / area1;
+
     printf("Densidade Populacional A: %.2f hab/km²\n", densidade1);
     
-    pibpercapta1 = (float) (pib1 / populacao1);
+    pibpercapta1 = (float) pib1 / populacao1;
 
     printf("PIB per Capita A: %.2f reais\n\n", pibpercapta1);
 
@@ -103,12 +102,16 @@ int main() {
     printf("Área B: %.2f km²\n", area2);
     printf("PIB B: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos B: %d\n", ponto2);
+
+    densidade2 = (float) populacao2 / area2;
+
     printf("Densidade Populacional B: %.2f hab/km²\n", densidade2);
     
-    pibpercapta2 = (float) (pib2 / populacao2) / 1;
+    pibpercapta2 = (float) pib2 / populacao2;
 
     printf("PIB per Capita B: %.2f reais\n", pibpercapta2);
 
     return 0;
+
 
 }
